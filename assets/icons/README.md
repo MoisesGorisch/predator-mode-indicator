@@ -1,0 +1,1 @@
+Custom MIT-licensed icon artwork. Orange leaf and green gauge are active. Purple lightning and magenta rocket are reserved artwork; Performance and Turbo detection is not implemented. SVGs are editable; PNGs and multi-resolution ICOs have transparent backgrounds.
