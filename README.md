@@ -1,10 +1,22 @@
+![Predator Mode Indicator: Eco enabled or disabled in the Windows notification area](docs/overview.svg)
+
 # Predator Mode Indicator
 
 A small Windows notification-area indicator for the **Eco state saved by Acer PredatorSense**. An orange leaf means Eco is enabled; a green gauge means Eco is disabled. It refreshes every five seconds without changing power settings or touching hardware controls.
 
 [Português](README.pt-BR.md) · [Download](https://github.com/MoisesGorisch/predator-mode-indicator/releases/latest)
 
-![Custom icon designs and small-size previews](docs/icons-preview.png)
+## What it looks like
+
+Actual screenshot of the green gauge in the Windows notification area:
+
+![Actual Windows tray screenshot with the green Eco-disabled gauge](docs/tray-balanced.png)
+
+The screenshot shows Eco disabled in the tested USB-C setup. The orange leaf appears when PredatorSense saves Eco as enabled.
+
+Icon artwork and previews at 16, 20, 24 and 32 pixels. Only Eco and Eco-disabled states are currently active; Performance/Turbo artwork is reserved:
+
+![English icon names, pixel dimensions and active versus reserved artwork](docs/icons-preview.png)
 
 ## What it currently detects
 

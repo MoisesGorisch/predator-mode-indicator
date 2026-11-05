@@ -1,6 +1,14 @@
+![Visão geral: estados Eco ativado e desativado na área de notificação](docs/overview.svg)
+
 # Predator Mode Indicator
 
 Indicador na área de notificação do Windows que acompanha o **estado Eco salvo pelo PredatorSense**, com atualização a cada cinco segundos.
+
+Print real do indicador na barra do Windows, com Eco desativado no cenário USB-C testado:
+
+![Print real do velocímetro verde na área de notificação](docs/tray-balanced.png)
+
+Artes com nomes em inglês e dimensões de 16, 20, 24 e 32 pixels. Desempenho e Turbo são apenas artes reservadas:
 
 ![Ícones e prévias em tamanhos pequenos](docs/icons-preview.png)
 

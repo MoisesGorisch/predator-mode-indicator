@@ -23,4 +23,6 @@ foreach ($name in @('README.md', 'README.pt-BR.md', 'LICENSE')) {
 }
 New-Item -ItemType Directory -Path (Join-Path $out 'docs') -Force | Out-Null
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs\icons-preview.png') -Destination (Join-Path $out 'docs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs\overview.svg') -Destination (Join-Path $out 'docs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs\tray-balanced.png') -Destination (Join-Path $out 'docs') -Force
 Write-Output 'Built dist/IndicadorPredator.exe'
