@@ -2,21 +2,22 @@
 
 # Predator Mode Indicator
 
-Indicador na área de notificação do Windows que acompanha o **estado Eco salvo pelo PredatorSense**, com atualização a cada cinco segundos.
-
-Print real do indicador na barra do Windows, com Eco desativado no cenário USB-C testado:
+Indicador na área de notificação do Windows que acompanha o **perfil salvo pelo PredatorSense**, com atualização a cada cinco segundos.
 
 ![Print real do velocímetro verde na área de notificação](docs/tray-balanced.png)
 
-Artes com nomes em inglês e dimensões de 16, 20, 24 e 32 pixels. Desempenho e Turbo são apenas artes reservadas:
+| Ícone | Estado |
+| --- | --- |
+| Lua branca | Silencioso |
+| Velocímetro verde | Equilibrado |
+| Raio roxo | Desempenho |
+| Foguete magenta | Turbo |
+| Folha laranja | Eco |
+| Bolinha cinza | Estado indisponível |
 
-![Ícones e prévias em tamanhos pequenos](docs/icons-preview.png)
+Com o carregador original reconhecido pelo PredatorSense, o indicador lê o perfil salvo no cenário ativo. Em USB-C ou bateria, lê o sinal de Eco. Quando o registro do adaptador está indisponível, o texto do ícone informa o estado de Eco com perfil desconhecido.
 
-- **Folha laranja:** Eco ativado (`Enable_Eco: 1`).
-- **Velocímetro verde:** Eco desativado (`Enable_Eco: 0`). No cenário USB-C testado, corresponde ao Equilibrado.
-- **Bolinha cinza:** estado ausente, ilegível ou não reconhecido.
-
-**Verde não confirma Equilibrado em todos os cenários.** Com o carregador original, também pode representar Silencioso, Desempenho ou Turbo. O raio roxo e o foguete magenta estão prontos como artes, mas esses modos ainda não são detectados separadamente.
+![Artes dos ícones e dimensões](docs/icons-preview.png)
 
 ## Instalação e uso
 
@@ -28,11 +29,9 @@ Para iniciar com o Windows, pressione `Win+R`, digite `shell:startup` e coloque 
 
 ## Origem e limites
 
-O programa lê `%ProgramData%\OEM\PredatorSense\ProfilePool\config.json`. Não altera esse arquivo, energia, iluminação, serviços ou firmware. Não acessa a rede nem envia telemetria.
+O programa lê o `%ProgramData%\OEM\PredatorSense\ProfilePool\config.json` e o estado do adaptador nos registros locais do PredatorSense. O ícone acompanha o estado salvo pelo aplicativo e depende de ele registrar as mudanças.
 
-A leitura é do estado salvo pelo aplicativo, não do firmware, plano de energia do Windows ou potência USB-C. Se o PredatorSense não salvar as mudanças, o indicador pode ficar desatualizado. O formato do arquivo não é uma interface pública documentada.
-
-Testado no **PHN16-71**, com **PredatorSense 5.0.1463** e carregador USB-C PD, nos modos Eco/Equilibrado. Outros modelos e versões não foram validados. Requer Windows com .NET Framework 4.x.
+Testado no **PHN16-71** com **PredatorSense 5.0.1463**. Os quatro perfis do carregador original passaram nos testes de leitura. Desempenho foi confirmado no indicador em execução. A compatibilidade com outros modelos e versões segue em aberto. Requer Windows com .NET Framework 4.x.
 
 ## Compilar
 

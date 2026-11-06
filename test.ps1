@@ -10,6 +10,13 @@ $cases = @(
     @{Json='{"Enable_Eco":"1"}'; Expected='indisponivel'},
     @{Json='{}'; Expected='indisponivel'},
     @{Json='{broken'; Expected='indisponivel'}
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":1,"profiles":[{"opMode":1},{"opMode":0}]}}'; Adapter=1; Expected='silencioso'},
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":1,"profiles":[{"opMode":0},{"opMode":1}]}}'; Adapter=1; Expected='equilibrado'},
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":0,"profiles":[{"opMode":4}]}}'; Adapter=1; Expected='desempenho'},
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":0,"profiles":[{"opMode":5}]}}'; Adapter=1; Expected='turbo'},
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":0,"profiles":[{"opMode":5}]}}'; Adapter=4; Expected='equilibrado-usbc'},
+    @{Json='{"Enable_Eco":1,"Scenario":{"active":0,"profiles":[{"opMode":5}]}}'; Adapter=4; Expected='eco'},
+    @{Json='{"Enable_Eco":0,"Scenario":{"active":2,"profiles":[{"opMode":5}]}}'; Adapter=1; Expected='indisponivel'}
 )
 $index = 0
 foreach ($case in $cases) {
@@ -17,7 +24,8 @@ foreach ($case in $cases) {
     $inputFile = Join-Path $scratch ('input-' + $index + '.json')
     $resultFile = Join-Path $scratch ('result-' + $index + '.txt')
     Set-Content -LiteralPath $inputFile -Value $case.Json -Encoding UTF8
-    $process = Start-Process -FilePath $exe -ArgumentList @('--probe', ('"'+$inputFile+'"'), ('"'+$resultFile+'"')) -WindowStyle Hidden -PassThru -Wait
+    $adapter = if ($case.ContainsKey('Adapter')) { $case.Adapter } else { 4 }
+    $process = Start-Process -FilePath $exe -ArgumentList @('--probe', ('"'+$inputFile+'"'), ('"'+$resultFile+'"'), [string]$adapter) -WindowStyle Hidden -PassThru -Wait
     if ($process.ExitCode -ne 0 -or (Get-Content -LiteralPath $resultFile -Raw) -ne $case.Expected) {
         throw "State case $index failed."
     }
@@ -39,4 +47,4 @@ foreach ($name in @('eco', 'equilibrado', 'desempenho', 'turbo')) {
         } finally { $stream.Dispose() }
     }
 }
-Write-Output 'PASS: 7 state cases and 16 embedded-icon checks.'
+Write-Output "PASS: $($cases.Count + 1) state cases and 16 embedded-icon checks."

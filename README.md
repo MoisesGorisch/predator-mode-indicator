@@ -2,37 +2,30 @@
 
 # Predator Mode Indicator
 
-A small Windows notification-area indicator for the **Eco state saved by Acer PredatorSense**. An orange leaf means Eco is enabled; a green gauge means Eco is disabled. It refreshes every five seconds without changing power settings or touching hardware controls.
+A Windows notification-area indicator for the profile saved by Acer PredatorSense. It refreshes every five seconds.
 
 [Português](README.pt-BR.md) · [Download](https://github.com/MoisesGorisch/predator-mode-indicator/releases/latest)
 
-## What it looks like
+![Windows tray screenshot showing the green gauge](docs/tray-balanced.png)
 
-Actual screenshot of the green gauge in the Windows notification area:
-
-![Actual Windows tray screenshot with the green Eco-disabled gauge](docs/tray-balanced.png)
-
-The screenshot shows Eco disabled in the tested USB-C setup. The orange leaf appears when PredatorSense saves Eco as enabled.
-
-Icon artwork and previews at 16, 20, 24 and 32 pixels. Only Eco and Eco-disabled states are currently active; Performance/Turbo artwork is reserved:
-
-![English icon names, pixel dimensions and active versus reserved artwork](docs/icons-preview.png)
-
-## What it currently detects
-
-| Icon | Meaning |
+| Icon | State |
 | --- | --- |
-| Orange leaf | PredatorSense saved `Enable_Eco: 1` |
-| Green gauge | PredatorSense saved `Enable_Eco: 0` |
-| Gray dot | Missing, unreadable, invalid or unsupported state |
+| White moon | Quiet |
+| Green gauge | Balanced |
+| Purple lightning | Performance |
+| Magenta rocket | Turbo |
+| Orange leaf | Eco |
+| Gray dot | State unavailable |
 
-**Green does not universally mean Balanced.** It corresponds to Balanced in the tested USB-C setup, where only Eco and Balanced were available. With the original charger, Eco disabled can also mean Quiet, Performance or Turbo. The purple lightning and magenta rocket artwork is included for future use; this version does **not** detect Performance or Turbo separately.
+On the tested PHN16-71, the original adapter enables Quiet, Balanced, Performance and Turbo. The indicator reads the active scenario's saved profile when the PredatorSense log identifies the original adapter. On USB-C or battery it uses the saved Eco flag. If the adapter record is unavailable, the tooltip reports Eco enabled or disabled with the profile unknown.
 
-The app reads `%ProgramData%\OEM\PredatorSense\ProfilePool\config.json`. This is a saved software state, not a direct firmware sensor, the Windows power plan or a USB-C power measurement. If PredatorSense stops updating the file, the icon can remain stale. The format is an undocumented implementation detail and may change.
+![Icon artwork and sizes](docs/icons-preview.png)
+
+The indicator reads the local configuration at `%ProgramData%\OEM\PredatorSense\ProfilePool\config.json` and the adapter status recorded in the local PredatorSense log. It reflects the profile saved by the app. Updates to the displayed profile and power source depend on PredatorSense saving and logging their changes.
 
 ## Compatibility
 
-Tested locally on **Acer Predator Helios Neo 16 PHN16-71**, Windows, PredatorSense **5.0.1463**, with a USB-C PD charger and the Eco/Balanced pair of modes. Other models and PredatorSense versions are unverified. Requires Windows with .NET Framework 4.x and a compatible PredatorSense state file. Application menus are currently in Brazilian Portuguese.
+Tested locally on **Acer Predator Helios Neo 16 PHN16-71**, Windows, PredatorSense **5.0.1463**, with the original adapter and a USB-C PD charger. The four AC profile mappings passed automated checks. Performance was verified on the running tray app. Other models and PredatorSense versions are unverified. Requires Windows with .NET Framework 4.x and a compatible PredatorSense state file. Application menus are currently in Brazilian Portuguese.
 
 ## Use
 
@@ -62,13 +55,13 @@ The checks exercise enabled, disabled, absent and malformed state files and load
 
 ## Privacy and scope
 
-- Reads the local PredatorSense file only; it does not modify it.
+- Reads the local PredatorSense configuration and adapter status records.
 - No networking, telemetry, firmware writes, service changes or power-profile changes.
 - No scheduled task or automatic startup registration.
 - Optional command-line diagnostics (`--status <file>`) write state changes locally. Normal use writes no diagnostic log.
 
 ## Contributing
 
-Compatibility reports are welcome. Include the notebook model, Windows and PredatorSense versions, and whether a manual Eco toggle updates the icon. Do not upload your full PredatorSense configuration or private logs. Better mode detection should be verified against actual mode changes before exposing Performance/Turbo states.
+Compatibility reports are welcome. Include the notebook model, Windows and PredatorSense versions, and whether a manual Eco toggle updates the icon. Do not upload your full PredatorSense configuration or private logs. For AC profiles, include the profile name shown by PredatorSense and the indicator tooltip.
 
 Independent community project; not affiliated with or endorsed by Acer. Acer and PredatorSense names belong to their respective owners. Source code and custom icon artwork: [MIT license](LICENSE).
