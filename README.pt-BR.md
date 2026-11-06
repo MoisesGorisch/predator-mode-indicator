@@ -1,4 +1,4 @@
-![Visão geral: estados Eco ativado e desativado na área de notificação](docs/overview.svg)
+![Visão geral dos perfis e ícones na área de notificação](docs/overview.svg)
 
 # Predator Mode Indicator
 

@@ -1,4 +1,4 @@
-![Predator Mode Indicator: Eco enabled or disabled in the Windows notification area](docs/overview.svg)
+![Predator Mode Indicator profile icons in the Windows notification area](docs/overview.svg)
 
 # Predator Mode Indicator
 

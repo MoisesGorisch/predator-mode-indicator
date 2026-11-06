@@ -1,22 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440">
-<rect width="1200" height="440" rx="22" fill="#15191f"/>
-<text x="52" y="76" fill="#f8fafc" font-family="Segoe UI,Arial,sans-serif" font-size="44" font-weight="700">Predator Mode Indicator</text>
-<text x="54" y="116" fill="#aeb9c8" font-family="Segoe UI,Arial,sans-serif" font-size="23">See the profile saved by PredatorSense at a glance.</text>
-<rect x="52" y="158" width="534" height="177" rx="18" fill="#222a34"/>
-<rect x="610" y="158" width="538" height="177" rx="18" fill="#222a34"/>
-<g transform="translate(76 193) scale(4.7)">
-<path d="M4 20 C1 16 2 10 7 6 C11 3 17 2 21 2 C22 8 21 14 17 18 C13 22 7 22 4 20" fill="none" stroke="#FF8800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 23 L16 8 M8 17 L8 10 M8 17 L15 17" fill="none" stroke="#FF8800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<text x="224" y="226" fill="#ff8800" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">Eco enabled</text>
-<text x="224" y="264" fill="#d0d7e2" font-family="Segoe UI,Arial,sans-serif" font-size="19">Orange leaf in the Windows tray</text>
-<g transform="translate(634 193) scale(4.7)">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="425" viewBox="0 0 1200 425">
+<rect width="1200" height="425" rx="22" fill="#15191f"/>
+<text x="48" y="65" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="700">Predator Mode Indicator</text>
+<text x="50" y="104" fill="#D2DBE6" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400">See the profile saved by PredatorSense in the Windows notification area.</text>
+<text x="50" y="155" fill="#9BAABD" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">ORIGINAL ADAPTER</text>
+<rect x="48" y="174" width="264" height="101" rx="15" fill="#222a34"/>
+<g transform="translate(63 200) scale(2.2)"><mask id="moon"><circle cx="12" cy="12" r="9" fill="white"/><circle cx="17.625" cy="8.625" r="8.625" fill="black"/></mask><circle cx="12" cy="12" r="9" fill="#F5F5F5" mask="url(#moon)"/></g>
+<text x="126" y="232" fill="#F5F5F5" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Quiet</text>
+<rect x="327" y="174" width="264" height="101" rx="15" fill="#222a34"/>
+<g transform="translate(342 200) scale(2.2)">
 <path d="M2 14 C4 8 8 6 12 6 C16 6 20 8 22 14" fill="none" stroke="#22C55E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 17 L17 11" fill="none" stroke="#22C55E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="12" cy="17" r="2.2" fill="#22C55E"/>
 </g>
-<text x="785" y="226" fill="#22c55e" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">Eco disabled</text>
-<text x="785" y="264" fill="#d0d7e2" font-family="Segoe UI,Arial,sans-serif" font-size="19">Balanced in the tested USB-C setup</text>
-<text x="54" y="387" fill="#aeb9c8" font-family="Segoe UI,Arial,sans-serif" font-size="19">Windows notification area  ·  Read-only  ·  5-second refresh  ·  No overlay</text>
-<text x="54" y="417" fill="#7f8c9e" font-family="Segoe UI,Arial,sans-serif" font-size="14">PHN16-71  ·  Original adapter: Quiet, Balanced, Performance, Turbo  ·  USB-C / battery: Eco or Balanced</text>
+<text x="405" y="232" fill="#22C55E" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Balanced</text>
+<rect x="606" y="174" width="264" height="101" rx="15" fill="#222a34"/>
+<g transform="translate(621 200) scale(2.2)">
+<circle cx="12" cy="12" r="10.2" fill="none" stroke="#7D5BF0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.8 4 L7 13.2 L11.5 13.2 L9.2 20 L17.4 10.7 L12.9 10.7 Z" fill="#7D5BF0"/>
+</g>
+<text x="684" y="232" fill="#7D5BF0" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Performance</text>
+<rect x="885" y="174" width="264" height="101" rx="15" fill="#222a34"/>
+<g transform="translate(900 200) scale(2.2)">
+<defs><mask id="window"><rect width="24" height="24" fill="white"/><circle cx="16.4" cy="7.6" r="1.9" fill="black"/></mask></defs><g mask="url(#window)">
+<path d="M7 11 L3.5 11.6 L1 15.2 L6.5 14.8 Z" fill="#FF00E1"/>
+<path d="M13 17 L12.7 22.5 L16.5 19.8 L17 16 Z" fill="#FF00E1"/>
+<path d="M7 14.5 C8.3 8.2 14.6 3 22 2 C21 9.4 15.8 15.7 9.5 17 Z" fill="#FF00E1"/>
+<path d="M6.6 17.3 C4.8 16.5 2.5 18.5 2.4 20.1 L4.5 19.5 L2.6 23 L6.5 21 L5.7 23 C9.5 21.6 9.2 18.7 6.6 17.3 Z" fill="#FF00E1"/>
+</g>
+</g>
+<text x="963" y="232" fill="#FF00E1" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Turbo</text>
+<text x="50" y="317" fill="#9BAABD" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">USB-C / BATTERY</text>
+<g transform="translate(50 334) scale(1.15)">
+<path d="M4 20 C1 16 2 10 7 6 C11 3 17 2 21 2 C22 8 21 14 17 18 C13 22 7 22 4 20" fill="none" stroke="#FF8800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 23 L16 8 M8 17 L8 10 M8 17 L15 17" fill="none" stroke="#FF8800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="87" y="355" fill="#FF8800" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Eco enabled</text>
+<g transform="translate(286 334) scale(1.15)">
+<path d="M2 14 C4 8 8 6 12 6 C16 6 20 8 22 14" fill="none" stroke="#22C55E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17 L17 11" fill="none" stroke="#22C55E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="12" cy="17" r="2.2" fill="#22C55E"/>
+</g>
+<text x="326" y="355" fill="#22C55E" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Eco disabled</text>
+<text x="50" y="394" fill="#9BAABD" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400">PHN16-71  ·  Read-only  ·  5-second refresh  ·  Gray dot when the state is unavailable</text>
 </svg>
