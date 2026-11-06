@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440">
 <rect width="1200" height="440" rx="22" fill="#15191f"/>
 <text x="52" y="76" fill="#f8fafc" font-family="Segoe UI,Arial,sans-serif" font-size="44" font-weight="700">Predator Mode Indicator</text>
-<text x="54" y="116" fill="#aeb9c8" font-family="Segoe UI,Arial,sans-serif" font-size="23">See the Eco state saved by PredatorSense at a glance.</text>
+<text x="54" y="116" fill="#aeb9c8" font-family="Segoe UI,Arial,sans-serif" font-size="23">See the profile saved by PredatorSense at a glance.</text>
 <rect x="52" y="158" width="534" height="177" rx="18" fill="#222a34"/>
 <rect x="610" y="158" width="538" height="177" rx="18" fill="#222a34"/>
 <g transform="translate(76 193) scale(4.7)">
@@ -18,5 +18,5 @@
 <text x="785" y="226" fill="#22c55e" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">Eco disabled</text>
 <text x="785" y="264" fill="#d0d7e2" font-family="Segoe UI,Arial,sans-serif" font-size="19">Balanced in the tested USB-C setup</text>
 <text x="54" y="387" fill="#aeb9c8" font-family="Segoe UI,Arial,sans-serif" font-size="19">Windows notification area  ·  Read-only  ·  5-second refresh  ·  No overlay</text>
-<text x="54" y="417" fill="#7f8c9e" font-family="Segoe UI,Arial,sans-serif" font-size="14">Community project tested on PHN16-71. Performance and Turbo are not detected separately.</text>
+<text x="54" y="417" fill="#7f8c9e" font-family="Segoe UI,Arial,sans-serif" font-size="14">PHN16-71  ·  Original adapter: Quiet, Balanced, Performance, Turbo  ·  USB-C / battery: Eco or Balanced</text>
 </svg>
